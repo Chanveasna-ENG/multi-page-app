@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn import datasets
 
+@st.cache_data
 def app():
     st.title('Data')
 
@@ -17,3 +18,5 @@ def app():
     df['class'] = df['class'].map({0:"setosa", 1:"versicolor", 2:"virginica"})
 
     st.write(df)
+
+app()

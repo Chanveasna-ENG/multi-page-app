@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
+@st.cache_data
 def app():
     st.title('Model')
 
@@ -25,3 +26,5 @@ def app():
     score = clf.score(X_test, Y_test)
     st.write('Accuracy:')
     st.write(score)
+
+app()
